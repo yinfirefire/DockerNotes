@@ -1,0 +1,503 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Single Container · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2.html" />
+    
+    
+    <link rel="prev" href="head.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../part1/1.html">
+            
+                <a href="../part1/1.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../part1/2.html">
+            
+                <a href="../part1/2.html">
+            
+                    
+                    Build Docker Images
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../part1/3.html">
+            
+                <a href="../part1/3.html">
+            
+                    
+                    Rebuild with Cache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../part2/head.html">
+            
+                <a href="../part2/head.html">
+            
+                    
+                    Example Project
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../part2/1.html">
+            
+                <a href="../part2/1.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../part2/2.html">
+            
+                <a href="../part2/2.html">
+            
+                    
+                    Docker Compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../part2/3.html">
+            
+                <a href="../part2/3.html">
+            
+                    
+                    Container Maintainence
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="head.html">
+            
+                <a href="head.html">
+            
+                    
+                    Production-Grade Workflow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.6.1" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    Single Container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    Multi-Container
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Single Container</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="single-container-workflow">Single Container Workflow</h1>
+<p><img src="diagram.png" alt="alt text">
+Travis CI for automation testing.</p>
+<p><code>Dockerfile.dev</code> for development, <code>Dockerfile</code> for production.</p>
+<p>During development, to avoid rebuild of image when editing code, we use <strong><em>mapping</em></strong> to have reference in <strong>Docker container mapping to local folder</strong>. (also called docker volume)  </p>
+<h2 id="an-react-example">An React Example</h2>
+<h3 id="step-1--build-dockerfiledev">Step 1:  Build <code>Dockerfile.dev</code></h3>
+<pre><code class="lang-docker"><span class="hljs-keyword">FROM</span> node:alpine
+
+<span class="hljs-keyword">WORKDIR</span> <span class="bash"><span class="hljs-string">&apos;/app&apos;</span>
+</span>
+<span class="hljs-keyword">COPY</span> <span class="bash">package.json .
+</span><span class="hljs-keyword">RUN</span> <span class="bash">npm install
+</span>
+<span class="hljs-keyword">COPY</span> <span class="bash">. .
+</span>
+<span class="hljs-keyword">CMD</span> <span class="bash">[<span class="hljs-string">&quot;npm&quot;</span>,<span class="hljs-string">&quot;run&quot;</span>,<span class="hljs-string">&quot;start&quot;</span>]
+</span></code></pre>
+<h3 id="step-2-build-image">Step 2: Build Image</h3>
+<pre><code class="lang-docker">Docker build -f Dockerfile.dev .
+</code></pre>
+<p>Since the <code>npm install</code> will install all the nodes_modules based on package.json, we can delete the nodes_modules to reduce space.</p>
+<h3 id="step-3-run-container-and-test">Step 3: Run Container and Test</h3>
+<pre><code class="lang-docker">Docker <span class="hljs-keyword">run</span> -p &lt;local port&gt;:&lt;container port&gt; -v /app/nodes_modules -v $(pwd):/app &lt;Image ID&gt;
+</code></pre>
+<pre><code class="lang-docker">docker exec -it &lt;Container ID&gt; npm <span class="hljs-keyword">run</span> test //test
+</code></pre>
+<p>This achieve docker volume (reference) except the mapping of nodes_modules(empty in local folder). So the code change can be reflected realtime in the container.
+Or use <code>docker-compose</code></p>
+<pre><code class="lang-yml"><span class="hljs-attr">version:</span> <span class="hljs-string">&apos;3&apos;</span>
+<span class="hljs-attr">services:</span>
+<span class="hljs-attr">  web:</span>
+<span class="hljs-attr">    build:</span> 
+<span class="hljs-attr">      context:</span> .
+<span class="hljs-attr">      dockerfile:</span> Dockerfile.dev
+<span class="hljs-attr">    ports:</span> 
+<span class="hljs-bullet">      -</span> <span class="hljs-string">&quot;3000:3000&quot;</span>
+<span class="hljs-attr">    volumes:</span> 
+<span class="hljs-bullet">      -</span> /app/node_modules
+<span class="hljs-bullet">      -</span> .:/app
+<span class="hljs-attr">  tests:</span>
+<span class="hljs-attr">    build:</span> 
+<span class="hljs-attr">      context:</span> .
+<span class="hljs-attr">      dockerfile:</span> Dockerfile.dev
+<span class="hljs-attr">    volumes:</span> 
+<span class="hljs-bullet">      -</span> /app/node_modules
+<span class="hljs-bullet">      -</span> .:/app
+<span class="hljs-attr">    command:</span> [<span class="hljs-string">&apos;npm&apos;</span>,<span class="hljs-string">&apos;run&apos;</span>,<span class="hljs-string">&apos;test&apos;</span>]
+</code></pre>
+<p>The above <code>docker-compose.yml</code> file will create two container one running webapp one running test. (Both auto-update based on local file) However, under this situation docker cannot interact with the running test process.</p>
+<h3 id="step-4-serve-application-in-production-environment">Step 4: Serve Application in Production Environment</h3>
+<div style="text-align:center"><img src="nginx2.png" alt="drawing" width="600"></div>
+
+<p><strong>New <code>Dockerfile</code>(for production, no .dev) with below codes:</strong></p>
+<pre><code class="lang-docker"><span class="hljs-keyword">FROM</span> node:alpine as builder //Build Phase
+
+<span class="hljs-keyword">WORKDIR</span> <span class="bash"><span class="hljs-string">&apos;/app&apos;</span>
+</span>
+<span class="hljs-keyword">COPY</span> <span class="bash">package.json .
+</span>
+<span class="hljs-keyword">RUN</span> <span class="bash">npm install
+</span>
+<span class="hljs-keyword">COPY</span> <span class="bash">. .
+</span>
+<span class="hljs-keyword">RUN</span> <span class="bash">npm run build
+</span></code></pre>
+<pre><code class="lang-docker"><span class="hljs-keyword">FROM</span> nginx  //Run Phase(default command of nginx will automatically start nginx)
+
+<span class="hljs-keyword">COPY</span> <span class="bash">--from=builder /app/build /usr/share/nginx/html
+</span></code></pre>
+<p>Then</p>
+<ul>
+<li><code>docker build .</code></li>
+<li><code>docker run -p &lt;LocalPort&gt;:80 &lt;Image ID&gt;</code> (80 is default port of nginx)</li>
+</ul>
+<h3 id="step-5-travis-ci-for-testing">Step 5: Travis-CI for Testing</h3>
+<div style="text-align:center"><img src="travis.png" alt="drawing" width="400"></div>
+
+<pre><code class="lang-yml"><span class="hljs-attr">sudo:</span> required
+
+<span class="hljs-attr">services:</span>
+<span class="hljs-bullet">  -</span> docker
+
+<span class="hljs-attr">before_install:</span>
+<span class="hljs-bullet">  -</span> docker build -t yinfirefire/docker-react -f Dockerfile.dev .
+
+<span class="hljs-attr">script:</span>
+<span class="hljs-bullet">  -</span> docker run yinfirefire/docker-react npm run test -- --coverage
+</code></pre>
+<p>Configuration of <code>.travis.yml</code>. After pushing to github, Travis-CI will automatically run the test.</p>
+<h3 id="step-6-deploy-to-aws-elastic-beanstalk-by-travis-ci">Step 6: Deploy to AWS Elastic Beanstalk by Travis-CI</h3>
+<ol>
+<li>Create a Elastic Beanstalk Web server with Docker configuration.</li>
+<li>Go to IAM and add user, then grant full access of elasticbeanstalk to travis-ci by passing <code>ACCESS_KEY</code> and <code>SECRET_KEY</code> to travis-ci environment variables.</li>
+<li>Edit <code>.travis.yml</code>  </li>
+</ol>
+<pre><code class="lang-yml"><span class="hljs-attr">deploy:</span>
+<span class="hljs-attr">  provider:</span> elasticbeanstalk
+<span class="hljs-attr">  region:</span> <span class="hljs-string">&quot;us-west-2&quot;</span>
+<span class="hljs-attr">  app:</span> &lt;app name<span class="hljs-string">&gt;
+</span><span class="hljs-attr">  env:</span> &lt;env is after app name<span class="hljs-string">&gt;
+</span><span class="hljs-attr">  bucket_name:</span> <span class="hljs-string">&quot;elasticbeanstalk-us-west-2-843055130065&quot;</span>
+<span class="hljs-attr">  bucket_path:</span> &lt;app name<span class="hljs-string">&gt;
+</span><span class="hljs-attr">  on:</span>
+<span class="hljs-attr">    branch:</span> master
+<span class="hljs-attr">  access_key_id:</span> $AWS_ACCESS_KEY
+<span class="hljs-attr">  secret_access_key:</span>
+<span class="hljs-attr">    secure:</span> <span class="hljs-string">&quot;$AWS_SECURE_KEY&quot;</span>
+</code></pre>
+<h3 id="step-7-expose-ports-from-elastic-beanstalk">Step 7: Expose Ports from Elastic Beanstalk</h3>
+<p>add <code>EXPOSE 80</code> in <code>Dockerfile</code></p>
+<pre><code class="lang-dockerfile"><span class="hljs-keyword">FROM</span> node:alpine as builder
+<span class="hljs-keyword">WORKDIR</span> <span class="bash"><span class="hljs-string">&apos;/app&apos;</span>
+</span><span class="hljs-keyword">COPY</span> <span class="bash">package.json .
+</span><span class="hljs-keyword">RUN</span> <span class="bash">npm install
+</span><span class="hljs-keyword">COPY</span> <span class="bash">. .
+</span><span class="hljs-keyword">RUN</span> <span class="bash">npm run build
+</span><span class="hljs-keyword">FROM</span> nginx
+
+<span class="hljs-keyword">EXPOSE</span> <span class="hljs-number">80</span>
+
+<span class="hljs-keyword">COPY</span> <span class="bash">--from=builder /app/build /usr/share/nginx/html
+</span></code></pre>
+<h3 id="step-8-github-config">Step 8: Github Config</h3>
+<ol>
+<li><code>git checkout -b &lt;branch name&gt;</code> to switch to a new branch.</li>
+<li>Develop on branch, make pull request and merge after test.</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="head.html" class="navigation navigation-prev " aria-label="Previous page: Production-Grade Workflow">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2.html" class="navigation navigation-next " aria-label="Next page: Multi-Container">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Single Container","level":"1.6.1","depth":2,"next":{"title":"Multi-Container","level":"1.6.2","depth":2,"path":"part3/2.md","ref":"./part3/2.md","articles":[]},"previous":{"title":"Production-Grade Workflow","level":"1.6","depth":1,"path":"part3/head.md","ref":"./part3/head.md","articles":[{"title":"Single Container","level":"1.6.1","depth":2,"path":"part3/1.md","ref":"./part3/1.md","articles":[]},{"title":"Multi-Container","level":"1.6.2","depth":2,"path":"part3/2.md","ref":"./part3/2.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"part3/1.md","mtime":"2019-03-21T18:23:23.374Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-25T19:49:19.467Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
